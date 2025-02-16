@@ -1,4 +1,4 @@
-#include "raylib.h"
+#include "example.hpp"
 
 void raylib_example()
 {
@@ -23,3 +23,11 @@ void raylib_example()
 
     CloseWindow();
 }
+
+/*
+TEST(raylibtest, test1) {
+    raylib_example();
+    
+    EXPECT_EQ(1, 1);
+}
+*/
