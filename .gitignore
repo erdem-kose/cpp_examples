@@ -1,0 +1,6 @@
+lib/external/w**devkit-**.exe
+lib/external/mingw
+lib/external/cmake
+lib/external/raylib/lib
+
+**/build
