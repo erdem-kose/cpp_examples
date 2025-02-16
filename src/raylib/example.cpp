@@ -1,12 +1,12 @@
 #include "raylib.h"
 
-int main(void)
+void raylib_example()
 {
     InitWindow(800, 450, "Love Ranger v0.1");
 
     while (!WindowShouldClose())
     {
-        Texture2D player = LoadTexture("../src/elflady.png");
+        Texture2D player = LoadTexture("../src/raylib/elflady.png");
         Color transparent = {255,255,255,255};
 
         BeginDrawing();
@@ -22,6 +22,4 @@ int main(void)
     }
 
     CloseWindow();
-
-    return 0;
 }
