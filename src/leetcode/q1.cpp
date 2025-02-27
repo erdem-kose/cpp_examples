@@ -58,16 +58,16 @@ class Solution {
 class Solution_best {
     public:
         vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> numToIndex;
-    
-        for (int i = 0; i < nums.size(); ++i) {
-            if (const auto it = numToIndex.find(target - nums[i]);
-                it != numToIndex.cend())
-            return {it->second, i};
-            numToIndex[nums[i]] = i;
-        }
-    
-        throw;
+            map<int, int> numToIndex ={};
+        
+            for (int i = 0; i < nums.size(); ++i) {
+                auto it = numToIndex.find(target - nums[i]);
+                if (it != numToIndex.cend())
+                    return {it->second, i};
+                numToIndex[nums[i]] = i;
+            }
+        
+            throw;
         }
     };
 
@@ -76,9 +76,9 @@ TEST(q1test, test1) {
     std::vector<int> input{2,7,11,15};
     std::vector<int> output;
 
-    output = sol.twoSum(input,9);
+    output = sol.twoSum(input,26);
 
-    std::vector<int> expected{0, 1};
+    std::vector<int> expected{2, 3};
     
     EXPECT_EQ(output, expected);
 }
